@@ -260,35 +260,42 @@ button[type="submit"]:hover {
   }
 
   .hero {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
     text-align: center;
     padding: 2.5rem 1.5rem;
-    min-height: auto;
   }
 
   .hero-content {
-    max-width: 520px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 720px;
   }
 
   .hero-content h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
     padding-left: 0;
   }
 
   .hero-content p {
     padding-left: 0;
+    font-size: 1rem;
   }
 
   .hero-image {
-    padding-right: 0;
-    min-height: 220px;
+    width: 100%;
+    min-height: 240px;
+    overflow: hidden;
+    border-radius: 14px;
   }
 
   .hero-image img {
-    max-height: 260px;
+    width: 100%;
+    height: auto;
     object-fit: cover;
+    display: block;
   }
 }
 
