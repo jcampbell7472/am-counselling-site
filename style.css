@@ -233,7 +233,7 @@ button[type="submit"]:hover {
 }
 
 /* 📱 Mobile */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   body {
     flex-direction: column;
   }
@@ -263,39 +263,31 @@ button[type="submit"]:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
     text-align: center;
-    padding: 2.5rem 1.5rem;
+    padding: 2rem 1.5rem;
+    min-height: auto;
   }
 
   .hero-content {
-    width: 100%;
-    max-width: 720px;
-  }
-
-  .hero-content h1 {
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
-    padding-left: 0;
-  }
-
-  .hero-content p {
-    padding-left: 0;
-    font-size: 1rem;
+    display: none;
   }
 
   .hero-image {
-    width: 100%;
-    min-height: 240px;
-    overflow: hidden;
-    border-radius: 14px;
+    display: none;
   }
 
-  .hero-image img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+  .hero-mobile-cta {
     display: block;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .hero-mobile-cta .cta-button {
+    width: 100%;
+    padding: 1.2rem 1rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -425,6 +417,9 @@ button[type="submit"]:hover {
   display: block;
 }
 
+.hero-mobile-cta {
+  display: none;
+}
 
 .divider-1 {
   background-position: center top;
@@ -483,7 +478,7 @@ button[type="submit"]:hover {
 
 
 /* Mobile Menu Behaviour */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   body {
     flex-direction: column;
     overflow-x: hidden;
@@ -531,7 +526,7 @@ button[type="submit"]:hover {
     width: 100%;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .section-divider {
     width: 100vw;
     margin-left: -2rem;
@@ -540,7 +535,7 @@ button[type="submit"]:hover {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .section-media {
     overflow-x: auto;
   }
@@ -550,13 +545,13 @@ button[type="submit"]:hover {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .bacp-badge {
     max-width: 220px;
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .bupa-button {
     padding: 0.7rem 1.5rem;
     font-size: 0.9rem;
@@ -572,7 +567,7 @@ button[type="submit"]:hover {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .sidebar-logo {
     width: 200px;
     margin: 0 auto 1.5rem auto;
@@ -617,7 +612,7 @@ button[type="submit"]:hover {
 }
 
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   #services .section-grid {
     grid-template-columns: 1fr;
     gap: 0.5rem;
@@ -656,6 +651,10 @@ button[type="submit"]:hover {
   margin-right: auto;
 
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.about-figure .cta-button {
+  margin-top: 1.5rem;
 }
 
 
