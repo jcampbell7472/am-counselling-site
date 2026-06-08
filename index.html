@@ -32,8 +32,9 @@
 
     <nav>
       <a href="#about">About</a>
-      <a href="#services">Consultations</a>
       <a href="#qualifications">Qualifications</a>
+      <a href="#services">Consultations</a>
+      <a href="#reviews">Reviews</a>
       <a href="#location">Location</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -179,6 +180,78 @@
       </div>
     </section>
 
+    <!-- Client Reviews -->
+    <section id="reviews" class="section">
+      <div class="section-grid">
+        <div class="section-text">
+          <h2>Client Reviews</h2>
+          <p>Real feedback from clients who have worked with Alice.</p>
+        </div>
+
+        <div class="section-media">
+          <div class="slideshow-container" id="reviews-carousel">
+            <div class="review-slide">
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">I was going through a really difficult period with burnout and decided to use the counselling support available through my employee assistance program. I was matched with Alice, and I’m so grateful I did. She created such a calm, supportive, and non-judgmental space where I felt genuinely listened to and understood.</p>
+              <p class="review-author">— Maria Morton</p>
+            </div>
+            <div class="review-slide">
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">I used Alice’s counselling service when going through a tough time and I must say, she’s absolutely amazing. So attentive, thoughtful, and has a knack for asking the right questions. She is incredibly supportive and I always felt better after our sessions. Very thankful to Alice for all her help - I totally recommend her services, especially if you’re new and seriously considering counselling.</p>
+              <p class="review-author">— Shriya Ganesh</p>
+            </div>
+            <div class="review-slide">
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">I had a few sessions with Alice and honestly found it really helpful. She made me feel comfortable straight away and I never felt judged or rushed.</p>
+              <p class="review-author">— Anita Dhani</p>
+            </div>
+            <div class="review-slide">
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">I can highly recommend Alice. After realising I had been suffering with anxiety for a couple of years, I eventually looked for help. I can honestly say I wouldn't be in such a better place without the help and coping mechanisms from Alice.</p>
+              <p class="review-author">— Cath Middleton</p>
+            </div>
+            <div class="review-slide">
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">Alice is an incredible counsellor who is very compassionate and supportive! I would highly recommend Alice for CBT as she always knows just the right thing to say. Alice is very flexible with both in-person and video call sessions! Thank you Alice for all your help so far, you have been amazing!</p>
+              <p class="review-author">— Ciara McStravick</p>
+            </div>
+            <div class="review-slide">
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">I contacted Alice in relation to stress and anxiety and she provided a tailored plan of 10 sessions that provided me with a toolkit of strategies to try and apply in my work and personal life to combat the stressful scenarios, allowing me to have a more positive and calm approach to life in general. Alice is excellent and professional. You won’t find a better therapist.</p>
+              <p class="review-author">— Gareth Dunn</p>
+            </div>
+            <div class="review-slide">
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">Alice is very friendly and reassuring. I have anxiety and depression and with a few questions in the first session we got straight to the root of the problem. In subsequent sessions I have been given tasks and coping strategies that have really helped me get back to my old self.</p>
+              <p class="review-author">— Keith Wilkins</p>
+            </div>
+            <div class="review-slide">
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">Was terrified walking into the unknown and Alice couldn’t have made it any easier. It’s been a year now and I can honestly say she’s made such a difference in my life. I haven’t gambled once (certainly thought about it) as the trust she puts in you is second to none. She’s listens and more importantly challenges in such a healthy way.</p>
+              <p class="review-author">— Aaron McConnell</p>
+            </div>
+            <div class="review-slide">
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">Really helped me see a way forward in a difficult time. Have had counselling and therapy before so knew what to expect but Alice put me at ease really quickly and easily being really personable and genuinely interested in me as a person.</p>
+              <p class="review-author">— George Gardner</p>
+            </div>
+            <div class="review-slide">
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">Having counselling with Alice really helped me. She gave honest and fair guidance with a gentle much needed sense of humour</p>
+              <p class="review-author">— Sally Gray</p>
+            </div>
+            <div class="review-slide">
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">Alice is an amazing Therapist she has helped me through relationship issues and anxiety issues. She has helped me on several occasions. She has excellent understanding and listening skills very helpful friendly and professional. I would definitely recommend Alice to anyone who needs help and support and regain their confidence back</p>
+              <p class="review-author">— Sonal Shah</p>
+            </div>
+            <button class="slide-nav prev" aria-label="Previous review">❮</button>
+            <button class="slide-nav next" aria-label="Next review">❯</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Location -->
     <section id="location" class="section">
       <div class="section-grid">
@@ -263,69 +336,7 @@
 
   </main>
 
-  <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const sidebar = document.querySelector('.sidebar');
-
-    toggle.addEventListener('click', () => {
-      sidebar.classList.toggle('open');
-    });
-
-    document.querySelectorAll('.sidebar a').forEach(link => {
-      link.addEventListener('click', () => {
-        sidebar.classList.remove('open');
-      });
-    });
-  </script>
-
-<script>
-const form = document.getElementById("contact-form");
-const status = document.getElementById("form-status");
-
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-
-  const formData = new FormData(form);
-
-  status.textContent = "Sending...";
-  status.style.color = "#1f3f39";
-
-  try {
-    const response = await fetch(form.action, {
-      method: "POST",
-      body: formData,
-      headers: {
-        'Accept': 'application/json'
-      }
-    });
-
-    const result = await response.json();
-    console.log('Formspree response:', response.status, result);
-
-    if (response.ok) {
-      status.textContent = "Thank you! Your message has been sent successfully.";
-      status.style.color = "#2f6f62";
-      form.reset();
-    } else {
-      let errorMessage = "Something went wrong. Please try again.";
-      if (response.status === 400) {
-        errorMessage = "Form validation error. Please check your input.";
-      } else if (response.status === 429) {
-        errorMessage = "Too many submissions. Please wait a few minutes.";
-      } else if (response.status === 403) {
-        errorMessage = "Form is not active. Please check your Formspree settings.";
-      }
-      status.textContent = errorMessage;
-      status.style.color = "#d32f2f";
-      console.error('Form submission failed:', response.status, result);
-    }
-  } catch (error) {
-    status.textContent = "Network error. Please check your connection and try again.";
-    status.style.color = "#d32f2f";
-    console.error('Network error:', error);
-  }
-});
-</script>
+  <script src="./script.js"></script>
 
 </body>
 
