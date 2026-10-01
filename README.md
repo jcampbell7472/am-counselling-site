@@ -1,0 +1,4 @@
+- Information and booking website for Alice Magee Counselling.
+- Developed with HTML, CSS, and JavaScript.
+- Features one-page navigation options, a Formspree booking form, and a client review carousel.
+- Deployed at: https://alicemageecounselling.co.uk/
